@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Produktivitas Belajar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Aplikasi Produktivitas Belajar</h1>
+    </header>
+
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#to-do-list">To-Do List</a>
+        <a href="#settings">Pengaturan</a>
+        <a href="#timer">Timer</a>
+        <a href="#spotify">Spotify</a>
+    </nav>
+
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="card">
+            <h2>Home</h2>
+            <p>Selamat datang di aplikasi produktivitas Gunakan To-Do List untuk mengatur tugas Anda dan Timer untuk tetap fokus. Jika anda ingin mendengaran musik tinggal pake spotify.</p>
+        </section>
+
+        <!-- To-Do List Section -->
+        <section id="to-do-list" class="card">
+            <h2>To-Do List</h2>
+            <div class="input-section">
+                <input type="text" id="todoInput" placeholder="Tambahkan target belajar..." autocapitalize="off">
+                <button id="addButton" aria-label="Tambah Target Belajar">Tambah</button>
+            </div>
+            <ul id="todoList"></ul>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="card">
+            <h2>Pengaturan Timer</h2>
+            <div>
+                <label for="workTime">Waktu Belajar:</label>
+                <input id="workTime" type="number" value="25"> menit
+            </div>
+            <div>
+                <label for="breakTime">Waktu Istirahat:</label>
+                <input id="breakTime" type="number" value="5"> menit
+            </div>
+        </section>
+
+        <!-- Timer Section -->
+        <section id="timer" class="card">
+            <h2>Timer</h2>
+            <div id="timeDisplay" class="timer-display">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="buttons">
+                <button id="startButton">Mulai</button>
+                <button id="pauseButton">Pause</button>
+                <button id="resetButton">Reset</button>
+            </div>
+        </section>
+
+        <section id="spotify"  class="card">
+            <h2>Spotify Player</h2>
+            <p>Dengarkan musik agar lebih tenang dan enjoy saat belajar.</p>
+            <div class="spotify">
+                <iframe 
+                    src="https://open.spotify.com/embed/playlist/2DlBhSG0eRQvJfWCSpfAkn?utm_source=generator" 
+                    width="300" 
+                    height="380" 
+                    frameborder="0" 
+                    allowtransparency="true" 
+                    allow="encrypted-media">
+                </iframe>
+            </div>
+        </section>        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
